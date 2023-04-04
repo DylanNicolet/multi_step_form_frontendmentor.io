@@ -1,0 +1,12 @@
+@use "../utils" as u;
+
+#app{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-color: u.$color-bg-1;
+    background-image: (url('../assets/images/bg-sidebar-mobile.svg'));
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding-top: 20px;
+}

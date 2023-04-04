@@ -1,4 +1,8 @@
 @use "./base/global";
 @use "./base/typography";
 
-@use "./pages/calculator";
+@use "./components/nav-indicator";
+@use "./components/personal-info";
+@use "./components/submit-footer";
+
+@use "./pages/app";

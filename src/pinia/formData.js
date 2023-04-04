@@ -1,16 +1,18 @@
 import { defineStore } from 'pinia'
 
-export const useCounterStore = defineStore('counter', {
+export const useFormDataStore = defineStore('formData', {
   state: () => {
-        return {
-            name: 'Dylan',
-            email: 'dylan@dylan.com',
-            phone: 92342345
-        }
+    return {
+      name: '',
+      email: '',
+      phone: 0
+    }
   },
   actions: {
-    increment() {
-      this.count++
+    updateFormData(e) {
+      this.name = e.name
+      this.email = e.email
+      this.phone = e.phone
     },
   },
 })
