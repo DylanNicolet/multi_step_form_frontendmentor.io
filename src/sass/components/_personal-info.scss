@@ -9,6 +9,10 @@
     flex-direction: column;
     border-radius: 10px;
 
+    @include u.desktop-only{
+        padding: 35px 7% 75px 7%;
+    }
+
     .title{
         margin-bottom: 13px;
         color: u.$color-primary;

@@ -6,16 +6,65 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 22px;
+
+    @include u.desktop-only{
+        background-image: (url('../assets/images/bg-sidebar-desktop.svg'));
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-color: red;
+        border-radius: 15px;
+        width: auto;
+        margin-bottom: 0;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        padding: 15px 80px 0px 15px;
+    }
+
+    .nav-item__container{
+        display: flex;
+        align-items: center;
+    }
+
+    .step{
+        display: none;
+
+        @include u.desktop-only{
+            display: block;
+            color: u.$color-secondary;
+            font-size: 0.7rem;
+            margin-bottom: 3px;
+        }
+    }
+
+    .title{
+        display: none;
+
+        @include u.desktop-only{
+            display: block;
+            white-space: nowrap;
+            color: u.$color-btn-light;
+            font-size: 0.6rem;
+            font-weight: 400;
+        }
+    }
+
+    .nav-item{
+        border: 1px solid u.$color-bg-2;
+        color: u.$color-bg-2;
+        margin: 10px;
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .nav_active{
+        color: u.$color-primary;
+        background-color: u.$color-bg-3;
+        border-color: u.$color-bg-3;
+    }
 }
 
-.nav-item{
-    border: 1px solid u.$color-bg-2;
-    color: u.$color-bg-2;
-    margin: 10px;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}

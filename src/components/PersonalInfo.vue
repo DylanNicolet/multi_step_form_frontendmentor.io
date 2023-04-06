@@ -1,7 +1,7 @@
 <template>
     <form class="personal-info__form">
         <h1 class="title">Personal info</h1>
-        <p class="description">Please provide your name, email<br> addres, and phone number.</p>
+        <p class="description">Please provide your name, email addres, and phone number.</p>
 
         <label :class="validName">Name</label>
         <input type="text" v-model="name" placeholder="e.g. Stephen King" required @blur="validateName" :class="validName" >
@@ -39,7 +39,7 @@ export default {
 
             if ( test ) {
                 validName.value = undefined
-                formData.updateFormData( {
+                formData.updateName( {
                     name: name.value,
                 } )
             }
@@ -54,7 +54,7 @@ export default {
 
             if ( test ) {
                 validEmail.value = undefined
-                formData.updateFormData( {
+                formData.updateEmail( {
                     email: email.value,
                 } )
             }
@@ -69,7 +69,7 @@ export default {
 
             if ( test ) {
                 validPhone.value = undefined
-                formData.updateFormData( {
+                formData.updatePhone( {
                     phone: phone.value,
                 } )
             }
