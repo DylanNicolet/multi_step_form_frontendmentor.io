@@ -3,10 +3,12 @@ import { defineStore } from 'pinia'
 export const useFormDataStore = defineStore('formData', {
   state: () => {
     return {
-      currentPage: 1,
+      currentPage: 2,
       name: '',
       email: '',
       phone: '',
+      planChoice: 'Arcade',
+      optionsChoice: 'Monthly'
     }
   },
   actions: {
@@ -22,5 +24,11 @@ export const useFormDataStore = defineStore('formData', {
     updatePhone( e ) {
       this.phone = e.phone
     },
+    updatePlanChoice( e ) {
+      this.planChoice = e.planChoice
+    },
+    updateOptionsChoice( e ) {
+      this.optionsChoice = e.optionsChoice
+    }
   },
 })

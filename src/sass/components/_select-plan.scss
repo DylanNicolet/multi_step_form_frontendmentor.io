@@ -1,0 +1,166 @@
+@use "../utils" as u;
+
+.select-plan__form{
+    background-color: u.$color-bg-2;
+    width: 90%;
+    margin: auto;
+    padding: 40px 5% 20px 5%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+
+    @include u.desktop-only{
+        padding: 35px 7% 75px 7%;
+        width: 100%;
+    }
+
+    .title{
+        margin-bottom: 13px;
+        color: u.$color-primary;
+        font-size: 1.6rem;
+
+        @include u.desktop-only{
+            cursor: default;
+        }
+    }
+
+    .description{
+        margin-bottom: 25px;
+        color: u.$color-secondary;
+
+        @include u.desktop-only{
+            cursor: default;
+        }
+    }
+
+    .select-plan__choice-container{
+
+        @include u.desktop-only{
+            display: flex;
+            flex-wrap: nowrap;
+            width: 100%;
+        }
+
+        .plan__container{
+            display: flex;
+            flex-wrap: nowrap;
+            align-items: center;
+            border: 1px solid u.$color-border-1;
+            border-radius: 7px;
+            margin-bottom: 12px;
+
+            @include u.desktop-only{
+                flex-direction: column;
+                width: 100%;
+                min-height: 150px;
+                align-items: flex-start;
+                justify-content: space-between;
+                cursor: pointer;
+
+                //Add margin left to all child except first on Desktop
+                &:not(:first-child){
+                    margin-left: 10px;
+                }
+            }
+
+            &--yearly{
+                padding-top: 10px;
+                padding-bottom: 15px;
+            }
+
+            &--active{
+                border-color: u.$color-active;
+                background-color: u.$color-bg-1;
+            }
+        }
+
+        .plan__icon{
+            margin: 15px;
+
+            &--yearly{
+                margin-top: 5px;
+            }
+        }
+
+        .plan__text{
+
+            @include u.desktop-only{
+                margin-left: 15px;
+                margin-bottom: 15px;
+            }
+
+            .plan__title{
+                color: u.$color-primary;
+                font-size: 1rem;
+                margin-bottom: 7px;
+            }
+
+            .plan__price{
+                margin-bottom: 4px;
+                color: u.$color-secondary;
+                font-size: 0.9rem;
+            }
+
+            .plan__free-months{
+                color: u.$color-primary;
+                font-size: 0.7rem;
+                margin-top: 7px;
+            }
+        }
+    }
+
+    
+
+    .options__container{
+        background-color: u.$color-bg-1;
+        border-radius: 7px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .options__choice{
+        color: u.$color-secondary;
+        font-size: 0.9rem;
+        font-weight: 500;
+
+        @include u.desktop-only{
+            cursor: default;
+        }
+
+        &--active{
+            color: u.$color-primary;
+        }
+    }
+
+    .toggle__container{
+        width: 40px;
+        height: 20px;
+        background-color: u.$color-primary;
+        margin: auto 20px;
+        border-radius: 15px;
+        display: flex;
+        align-items: center;
+
+        @include u.desktop-only{
+            cursor: pointer;
+        }
+
+        &--yearly{
+            justify-content: flex-end;
+        }
+    }
+
+    .toggle{
+        height: 12px;
+        width: 12px;
+        background-color: u.$color-bg-1;
+        border-radius: 50%;
+        margin: auto 4px;
+    }
+}

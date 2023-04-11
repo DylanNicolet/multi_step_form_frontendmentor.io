@@ -7,15 +7,30 @@
     width: 100%;
     display: flex;
     height: 70px;
-    justify-content: flex-end;
+    justify-content: space-between;
     padding: 15px 5%;
 
     @include u.desktop-only{
-        position: absolute;
-        width: auto;
+        position: initial;
+        width: 100%;
         background-color: transparent;
         right: calc(5% - 5px);
         bottom: 10px;
+    }
+
+    .go-back-button{
+        background-color: transparent;
+        border: none;
+        font-weight: 600;
+        color: u.$color-secondary;
+
+        @include u.desktop-only{
+            cursor: pointer;
+
+            &:hover{
+                color: u.$color-primary;
+            }
+        }
     }
 
     .submit-button{
@@ -25,10 +40,12 @@
         padding-left: 15px;
         border: none;
         border-radius: 5px;
+        font-weight: 500;
 
         @include u.desktop-only{
             padding-left: 20px;
             padding-right: 20px;
+            cursor: pointer;
         }
     }
 }

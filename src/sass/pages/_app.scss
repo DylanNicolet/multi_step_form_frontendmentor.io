@@ -27,11 +27,21 @@
         width: 75%;
         max-width: 850px;
         height: auto;
+        min-height: 550px;
         background-color: u.$color-bg-2;
         background-image: none;
         border-radius: 15px;
         display: flex;
         padding: 18px;
         position: relative;
+    }
+
+    .desktop-style__modifier{
+        @include u.desktop-only{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
     }
 }
