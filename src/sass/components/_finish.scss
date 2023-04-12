@@ -1,0 +1,140 @@
+@use "../utils" as u;
+
+.finish__form{
+    background-color: u.$color-bg-2;
+    width: 90%;
+    margin: auto;
+    padding: 40px 5% 20px 5%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+
+    @include u.desktop-only{
+        padding: 35px 7% 75px 7%;
+        width: 100%;
+    }
+
+    .title{
+        margin-bottom: 13px;
+        color: u.$color-primary;
+        font-size: 1.6rem;
+
+        @include u.desktop-only{
+            cursor: default;
+        }
+    }
+
+    .description{
+        margin-bottom: 25px;
+        color: u.$color-secondary;
+
+        @include u.desktop-only{
+            cursor: default;
+        }
+    }
+
+    .finish__content{
+        background-color: u.$color-bg-1;
+        border-radius: 7px;
+        padding: 15px;
+
+        .finish__recap{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            section{
+                display: flex;
+                flex-direction: column;
+
+            }
+
+            .type{
+                font-weight: 600;
+                color: u.$color-primary;
+                font-size: 0.9rem;
+            }
+
+            .change__button{
+                background-color: transparent;
+                color: u.$color-secondary;
+                border: none;
+                text-decoration: underline;
+                margin-bottom: 15px;
+                margin-top: 5px;
+                font-weight: 500;
+                width: 60px;
+                transform: translateX(-7px);
+            }
+
+            .price{
+                font-weight: 600;
+                color: u.$color-primary;
+                margin-bottom: auto;
+                margin-top: 10px;
+                font-size: 0.9rem;
+            }
+        }
+
+        hr{
+            height: 1px;
+            background-color: u.$color-border-1;
+            border: none;
+        }
+
+        .finish__add-on{
+            display: flex;
+            justify-content: space-between;
+
+            .add-on{
+                color: u.$color-secondary;
+                margin-top: 13px;
+            }
+
+            .price{
+                margin-top: 13px;
+                font-size: 0.9rem;
+                font-weight: 500;
+                color: u.$color-primary;
+            }
+        }
+    }
+
+    .finish__total{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px 15px 10px 15px;
+
+        .total{
+            color: u.$color-secondary;
+            font-size: 0.95rem;
+        }
+
+        .price{
+            font-weight: 600;
+            color: u.$color-active;
+        }
+    }
+
+    .thank-you{
+        padding: 50px 10px;
+        text-align: center;
+
+        img{
+            width: 60px;
+            margin-bottom: 20px;
+        }
+
+        .thank-you__title{
+            font-size: 1.5rem;
+            color: u.$color-primary;
+            margin-bottom: 10px;
+        }
+
+        .thank-you__description{
+            color: u.$color-secondary;
+            font-size: 0.95rem;
+            line-height: 23px;
+        }
+    }
+}

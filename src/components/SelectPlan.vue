@@ -64,8 +64,7 @@ export default {
         const formData = useFormDataStore()
 
         //States
-        const { planChoice } = storeToRefs( formData )
-        const { optionsChoice } = storeToRefs( formData )
+        const { planChoice, optionsChoice } = storeToRefs( formData )
         
 
         function handlePlanClick(choice) {

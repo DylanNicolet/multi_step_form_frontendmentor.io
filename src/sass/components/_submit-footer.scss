@@ -33,7 +33,7 @@
         }
     }
 
-    .submit-button{
+    .next-step{
         background-color: u.$color-primary;
         color: u.$color-btn-light;
         padding-right: 15px;
@@ -47,5 +47,14 @@
             padding-right: 20px;
             cursor: pointer;
         }
+    }
+
+    .confirm{
+        background-color: u.$color-active;
+        color: u.$color-btn-light;
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 5px;
+        border: none;
     }
 }

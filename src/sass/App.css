@@ -168,7 +168,7 @@ body, button {
     color: hsl(213, 96%, 18%);
   }
 }
-.submit-footer .submit-button {
+.submit-footer .next-step {
   background-color: hsl(213, 96%, 18%);
   color: white;
   padding-right: 15px;
@@ -178,11 +178,19 @@ body, button {
   font-weight: 500;
 }
 @media only screen and (min-width: 920px) {
-  .submit-footer .submit-button {
+  .submit-footer .next-step {
     padding-left: 20px;
     padding-right: 20px;
     cursor: pointer;
   }
+}
+.submit-footer .confirm {
+  background-color: hsl(243, 100%, 62%);
+  color: white;
+  padding-left: 20px;
+  padding-right: 20px;
+  border-radius: 5px;
+  border: none;
 }
 
 .select-plan__form {
@@ -330,6 +338,197 @@ body, button {
   background-color: hsl(218, 100%, 97%);
   border-radius: 50%;
   margin: auto 4px;
+}
+
+.add-on__form {
+  background-color: hsl(0, 0%, 100%);
+  width: 90%;
+  margin: auto;
+  padding: 40px 5% 20px 5%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+@media only screen and (min-width: 920px) {
+  .add-on__form {
+    padding: 35px 7% 75px 7%;
+    width: 100%;
+  }
+}
+.add-on__form .title {
+  margin-bottom: 13px;
+  color: hsl(213, 96%, 18%);
+  font-size: 1.6rem;
+}
+@media only screen and (min-width: 920px) {
+  .add-on__form .title {
+    cursor: default;
+  }
+}
+.add-on__form .description {
+  margin-bottom: 25px;
+  color: hsl(231, 11%, 63%);
+}
+@media only screen and (min-width: 920px) {
+  .add-on__form .description {
+    cursor: default;
+  }
+}
+.add-on__form .add-on__container {
+  border: 1px solid hsl(231, 11%, 63%);
+  border-radius: 7px;
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 15px;
+  margin-bottom: 15px;
+  align-items: center;
+}
+.add-on__form .add-on__container input {
+  accent-color: hsl(243, 100%, 62%);
+  pointer-events: none;
+}
+.add-on__form .add-on__container .add-on__text {
+  margin-left: 15px;
+}
+.add-on__form .add-on__container .add-on__title {
+  font-size: 1rem;
+  color: hsl(213, 96%, 18%);
+}
+.add-on__form .add-on__container .add-on__description {
+  color: hsl(231, 11%, 63%);
+  font-size: 0.8rem;
+  margin-top: 2px;
+}
+.add-on__form .add-on__container .add-on__price {
+  margin-left: auto;
+  font-size: 0.8rem;
+  color: hsl(243, 100%, 62%);
+}
+.add-on__form .--active {
+  border-color: hsl(243, 100%, 62%);
+  background-color: hsl(218, 100%, 97%);
+}
+
+.finish__form {
+  background-color: hsl(0, 0%, 100%);
+  width: 90%;
+  margin: auto;
+  padding: 40px 5% 20px 5%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+}
+@media only screen and (min-width: 920px) {
+  .finish__form {
+    padding: 35px 7% 75px 7%;
+    width: 100%;
+  }
+}
+.finish__form .title {
+  margin-bottom: 13px;
+  color: hsl(213, 96%, 18%);
+  font-size: 1.6rem;
+}
+@media only screen and (min-width: 920px) {
+  .finish__form .title {
+    cursor: default;
+  }
+}
+.finish__form .description {
+  margin-bottom: 25px;
+  color: hsl(231, 11%, 63%);
+}
+@media only screen and (min-width: 920px) {
+  .finish__form .description {
+    cursor: default;
+  }
+}
+.finish__form .finish__content {
+  background-color: hsl(218, 100%, 97%);
+  border-radius: 7px;
+  padding: 15px;
+}
+.finish__form .finish__content .finish__recap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.finish__form .finish__content .finish__recap section {
+  display: flex;
+  flex-direction: column;
+}
+.finish__form .finish__content .finish__recap .type {
+  font-weight: 600;
+  color: hsl(213, 96%, 18%);
+  font-size: 0.9rem;
+}
+.finish__form .finish__content .finish__recap .change__button {
+  background-color: transparent;
+  color: hsl(231, 11%, 63%);
+  border: none;
+  text-decoration: underline;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  font-weight: 500;
+  width: 60px;
+  transform: translateX(-7px);
+}
+.finish__form .finish__content .finish__recap .price {
+  font-weight: 600;
+  color: hsl(213, 96%, 18%);
+  margin-bottom: auto;
+  margin-top: 10px;
+  font-size: 0.9rem;
+}
+.finish__form .finish__content hr {
+  height: 1px;
+  background-color: hsl(231, 23%, 87%);
+  border: none;
+}
+.finish__form .finish__content .finish__add-on {
+  display: flex;
+  justify-content: space-between;
+}
+.finish__form .finish__content .finish__add-on .add-on {
+  color: hsl(231, 11%, 63%);
+  margin-top: 13px;
+}
+.finish__form .finish__content .finish__add-on .price {
+  margin-top: 13px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: hsl(213, 96%, 18%);
+}
+.finish__form .finish__total {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 15px 10px 15px;
+}
+.finish__form .finish__total .total {
+  color: hsl(231, 11%, 63%);
+  font-size: 0.95rem;
+}
+.finish__form .finish__total .price {
+  font-weight: 600;
+  color: hsl(243, 100%, 62%);
+}
+.finish__form .thank-you {
+  padding: 50px 10px;
+  text-align: center;
+}
+.finish__form .thank-you img {
+  width: 60px;
+  margin-bottom: 20px;
+}
+.finish__form .thank-you .thank-you__title {
+  font-size: 1.5rem;
+  color: hsl(213, 96%, 18%);
+  margin-bottom: 10px;
+}
+.finish__form .thank-you .thank-you__description {
+  color: hsl(231, 11%, 63%);
+  font-size: 0.95rem;
+  line-height: 23px;
 }
 
 #app {
