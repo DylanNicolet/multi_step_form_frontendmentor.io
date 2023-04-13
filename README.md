@@ -37,7 +37,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [https://github.com/DylanNicolet/multi_step_form_frontendmentor.io](https://github.com/DylanNicolet/multi_step_form_frontendmentor.io)
-- Live Site URL: [https://dylannicolet-multi-step-form.netlify.io](https://dylannicolet-multi-step-form.netlify.io)
+- Live Site URL: [https://dylannicolet-multi-step-form.netlify.io](https://dylannicolet-multi-step-form.netlify.app)
 
 ## My process
 
