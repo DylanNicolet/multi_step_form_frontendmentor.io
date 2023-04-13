@@ -85,10 +85,12 @@ body, button {
   display: flex;
   flex-direction: column;
   border-radius: 10px;
+  box-shadow: 0px 10px 20px -15px #e9e9e9;
 }
 @media only screen and (min-width: 920px) {
   .personal-info__form {
     padding: 35px 7% 75px 7%;
+    box-shadow: none;
   }
 }
 .personal-info__form .title {
@@ -102,10 +104,22 @@ body, button {
   color: hsl(231, 11%, 63%);
   cursor: default;
 }
-.personal-info__form label {
+.personal-info__form .label__container {
+  display: flex;
+  justify-content: space-between;
+}
+.personal-info__form .label__container label {
   color: hsl(213, 96%, 18%);
   margin-bottom: 3px;
   font-size: 0.8rem;
+}
+.personal-info__form .label__container .required {
+  color: hsl(353, 84%, 57%);
+  font-weight: 600;
+  font-size: 0.7rem;
+}
+.personal-info__form .input--required {
+  border-color: hsl(353, 84%, 57%);
 }
 .personal-info__form input {
   height: 40px;
@@ -113,6 +127,7 @@ body, button {
   border-radius: 5px;
   padding: 17px;
   font-size: 0.9rem;
+  font-weight: 600;
   color: hsl(213, 96%, 18%);
 }
 .personal-info__form input:hover, .personal-info__form input:focus {
@@ -128,15 +143,15 @@ body, button {
   outline: none;
 }
 .personal-info__form span {
-  color: rgb(221, 45, 45);
+  color: hsl(353, 84%, 57%);
   margin-bottom: 10px;
   margin-top: 2px;
   font-size: 0.6rem;
   opacity: 0;
 }
 .personal-info__form .--invalid {
-  border-color: rgb(221, 45, 45);
-  color: rgb(221, 45, 45);
+  border-color: hsl(353, 84%, 57%);
+  color: hsl(353, 84%, 57%);
   opacity: 1;
 }
 
@@ -217,10 +232,12 @@ body, button {
   display: flex;
   flex-direction: column;
   border-radius: 10px;
+  box-shadow: 0px 10px 20px -15px #e9e9e9;
 }
 @media only screen and (min-width: 920px) {
   .select-plan__form {
     padding: 35px 7% 75px 7%;
+    box-shadow: none;
   }
 }
 .select-plan__form .title {
@@ -366,11 +383,13 @@ body, button {
   display: flex;
   flex-direction: column;
   border-radius: 10px;
+  box-shadow: 0px 10px 20px -15px #e9e9e9;
 }
 @media only screen and (min-width: 920px) {
   .add-on__form {
     padding: 35px 7% 75px 7%;
     width: 100%;
+    box-shadow: none;
   }
 }
 .add-on__form .title {
@@ -443,11 +462,13 @@ body, button {
   display: flex;
   flex-direction: column;
   border-radius: 10px;
+  box-shadow: 0px 10px 20px -15px #e9e9e9;
 }
 @media only screen and (min-width: 920px) {
   .finish__form {
     padding: 35px 7% 75px 7%;
     width: 100%;
+    box-shadow: none;
   }
 }
 .finish__form .title {
@@ -601,6 +622,7 @@ body, button {
     display: flex;
     padding: 18px;
     position: relative;
+    box-shadow: 0px 10px 30px -15px #d6d6d6;
   }
 }
 @media only screen and (min-width: 920px) {

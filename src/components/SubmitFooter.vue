@@ -14,6 +14,7 @@ export default {
     setup() {
         
         const formData = useFormDataStore()
+        
         const { currentPage,
             thankYou,
             name,
@@ -32,7 +33,14 @@ export default {
         function handleNextStep() {
             let validPersonalInfo = false
 
-            if ( formData.name && formData.email && formData.phone ) {
+            if (
+                formData.validName != "--invalid" &&
+                formData.validEmail != "--invalid" &&
+                formData.validPhone != "--invalid" &&
+                formData.name &&
+                formData.email &&
+                formData.phone
+            ) {
                 validPersonalInfo = true
             }
 
@@ -41,16 +49,31 @@ export default {
                     nameEmpty : "required"
                 })
             }
+            else if ( formData.name ) {
+                formData.updateNameEmpty( {
+                    nameEmpty: "empty"
+                } )
+            }
 
             if ( !formData.email ) {
                 formData.updateEmailEmpty( {
                     emailEmpty: "required"
                 } )
             }
+            else if ( formData.email ) {
+                formData.updateEmailEmpty( {
+                    emailEmpty: "empty"
+                } )
+            }
 
             if ( !formData.phone ) {
                 formData.updatePhoneEmpty( {
                     phoneEmpty: "required"
+                } )
+            }
+            else if ( formData.phone ) {
+                formData.updatePhoneEmpty( {
+                    phoneEmpty: "empty"
                 } )
             }
 

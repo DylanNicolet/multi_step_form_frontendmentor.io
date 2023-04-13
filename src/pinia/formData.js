@@ -10,6 +10,9 @@ export const useFormDataStore = defineStore('formData', {
       nameEmpty: "empty",
       emailEmpty: "empty",
       phoneEmpty: "empty",
+      validName: undefined,
+      validEmail: undefined,
+      validPhone: undefined,
       planChoice: 'Arcade',
       optionsChoice: 'Monthly',
       onlineServices: true,
@@ -39,6 +42,15 @@ export const useFormDataStore = defineStore('formData', {
     },
     updatePhoneEmpty( e ) {
       this.phoneEmpty = e.phoneEmpty
+    },
+    updateValidName( e ) {
+      this.validName = e.validName
+    },
+    updateValidEmail( e ) {
+      this.validEmail = e.validEmail
+    },
+    updateValidPhone( e ) {
+      this.validPhone = e.validPhone
     },
     updatePlanChoice( e ) {
       this.planChoice = e.planChoice
