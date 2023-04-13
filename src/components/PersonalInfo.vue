@@ -14,6 +14,8 @@
         <label :class="validPhone">Phone Number</label>
         <input type="number" v-model="phone" placeholder="e.g. +1 234 567 890" required @blur="validatePhone" :class="validPhone" >
         <span :class="validPhone">Invalid Phone Number!</span>
+
+        <h1 v-if="(emailEmpty === 'required')">{{ emailEmpty }}</h1>
     </form>
 </template>
 
@@ -25,6 +27,8 @@ export default {
     setup() {
         const formData = useFormDataStore()
 
+
+
         //States
         const name = ref( '' )
         const email = ref( '' )
@@ -32,6 +36,9 @@ export default {
         const validEmail = ref( '' )
         const validName = ref( '' )
         const validPhone = ref( '' )
+        const nameEmpty = formData.nameEmpty
+        const emailEmpty = formData.emailEmpty
+        const phoneEmpty = formData.emailEmpty
 
         //function to validate Name and update store
         function validateName() {
@@ -41,6 +48,9 @@ export default {
                 validName.value = undefined
                 formData.updateName( {
                     name: name.value,
+                } )
+                formData.updateNameEmpty( {
+                    nameEmpty: "not empty",
                 } )
             }
             else {
@@ -57,6 +67,9 @@ export default {
                 formData.updateEmail( {
                     email: email.value,
                 } )
+                formData.updateEmailEmpty( {
+                    emailEmpty: "not empty",
+                } )
             }
             else {
                 validEmail.value = "--invalid"
@@ -72,6 +85,9 @@ export default {
                 formData.updatePhone( {
                     phone: phone.value,
                 } )
+                formData.updatePhoneEmpty( {
+                    phoneEmpty: "not empty",
+                } )
             }
             else {
                 validPhone.value = "--invalid"
@@ -79,7 +95,7 @@ export default {
         }
 
         //Make setup values available to component
-        return {validateName, validateEmail, validatePhone, name, email, phone, validEmail, validName, validPhone}
+        return {validateName, validateEmail, validatePhone, name, email, phone, validEmail, validName, validPhone, nameEmpty, emailEmpty, phoneEmpty}
     }
     
 }

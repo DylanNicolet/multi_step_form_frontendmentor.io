@@ -42,6 +42,14 @@
         margin-bottom: 15px;
         align-items: center;
 
+        @include u.desktop-only{
+            cursor: pointer;
+
+            &:hover{
+                border-color: u.$color-active;
+            }
+        }
+
         input{
             accent-color: u.$color-active;
             pointer-events: none;

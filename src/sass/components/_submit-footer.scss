@@ -46,6 +46,10 @@
             padding-left: 20px;
             padding-right: 20px;
             cursor: pointer;
+
+            &:hover{
+                background-color: lighten(u.$color-primary, 20%);
+            }
         }
     }
 
@@ -56,5 +60,13 @@
         padding-right: 20px;
         border-radius: 5px;
         border: none;
+
+        @include u.desktop-only{
+            cursor: pointer;
+
+            &:hover{
+                background-color: lighten(u.$color-active, 15%);
+            }
+        }
     }
 }

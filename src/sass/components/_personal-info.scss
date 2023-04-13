@@ -11,18 +11,19 @@
 
     @include u.desktop-only{
         padding: 35px 7% 75px 7%;
-        width: 100%;
     }
 
     .title{
         margin-bottom: 13px;
         color: u.$color-primary;
         font-size: 1.6rem;
+        cursor: default;
     }
 
     .description{
         margin-bottom: 25px;
         color: u.$color-secondary;
+        cursor: default;
     }
 
     label{
@@ -38,6 +39,10 @@
         padding: 17px;
         font-size: 0.9rem;
         color: u.$color-primary;
+
+        &:hover, &:focus{
+            border-color: u.$color-active;
+        }
 
         &::placeholder {
             color: u.$color-secondary;

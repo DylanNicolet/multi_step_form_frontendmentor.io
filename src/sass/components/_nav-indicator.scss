@@ -19,6 +19,7 @@
         justify-content: flex-start;
         align-items: flex-start;
         padding: 15px 80px 0px 15px;
+        cursor: default;
     }
 
     .nav-item__container{
@@ -44,8 +45,8 @@
             display: block;
             white-space: nowrap;
             color: u.$color-btn-light;
-            font-size: 0.6rem;
-            font-weight: 400;
+            font-size: 0.7rem;
+            font-weight: 800;
         }
     }
 

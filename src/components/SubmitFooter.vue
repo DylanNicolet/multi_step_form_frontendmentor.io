@@ -14,7 +14,20 @@ export default {
     setup() {
         
         const formData = useFormDataStore()
-        const { currentPage, thankYou, name, email, phone, planChoice, optionsChoice, onlineServices, largerStorage, customizableProfile } = storeToRefs( formData )
+        const { currentPage,
+            thankYou,
+            name,
+            email,
+            phone,
+            nameEmpty,
+            emailEmpty,
+            phoneEmpty,
+            planChoice,
+            optionsChoice,
+            onlineServices,
+            largerStorage,
+            customizableProfile
+        } = storeToRefs( formData )
 
         function handleNextStep() {
             let validPersonalInfo = false
@@ -22,6 +35,25 @@ export default {
             if ( formData.name && formData.email && formData.phone ) {
                 validPersonalInfo = true
             }
+
+            if ( !formData.name ) {
+                formData.updateNameEmpty( {
+                    nameEmpty : "required"
+                })
+            }
+
+            if ( !formData.email ) {
+                formData.updateEmailEmpty( {
+                    emailEmpty: "required"
+                } )
+            }
+
+            if ( !formData.phone ) {
+                formData.updatePhoneEmpty( {
+                    phoneEmpty: "required"
+                } )
+            }
+
             if ( formData.currentPage === 1 && validPersonalInfo) {
                 formData.updateCurrentPage( {
                     currentPage: formData.currentPage+1
@@ -63,7 +95,24 @@ export default {
         }
 
         //Make setup values available to component
-        return { handleNextStep, handleGoBack, handleConfirm, currentPage, thankYou, name, email, phone, planChoice, optionsChoice, onlineServices, largerStorage, customizableProfile }
+        return {
+            handleNextStep,
+            handleGoBack,
+            handleConfirm,
+            currentPage,
+            thankYou,
+            name,
+            email,
+            phone,
+            nameEmpty,
+            emailEmpty,
+            phoneEmpty,
+            planChoice,
+            optionsChoice,
+            onlineServices,
+            largerStorage,
+            customizableProfile
+        }
     }
 }
 </script>

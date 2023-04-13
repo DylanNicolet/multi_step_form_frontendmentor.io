@@ -11,7 +11,6 @@
 
     @include u.desktop-only{
         padding: 35px 7% 75px 7%;
-        width: 100%;
     }
 
     .title{
@@ -56,6 +55,10 @@
                 align-items: flex-start;
                 justify-content: space-between;
                 cursor: pointer;
+
+                &:hover{
+                    border-color: u.$color-active;
+                }
 
                 //Add margin left to all child except first on Desktop
                 &:not(:first-child){
